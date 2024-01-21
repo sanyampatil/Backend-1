@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "this is a backend from chai our code hitesh sir",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [
     "javascrip",
@@ -17,6 +17,11 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
   }
 }
