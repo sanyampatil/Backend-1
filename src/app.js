@@ -1,22 +1,23 @@
-import express from "express"
-import cors from "cors"
-import cookieParser from "cookie-parser"
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
-const app = express()
+const app = express();
 
-app.use(cors({
+app.use(
+  cors({
     origin: process.env.CORS_ORIGIN,
-    credentials: true
-}))
+    credentials: true,
+  }),
+);
 
-app.post('/',(req,res)=>{
-    res.send("hellow word")
-})
+app.post('/', (req, res) => {
+  res.send('hellow word');
+});
 
-app.use(express.json({limit: "16kb"}))
-app.use(express.urlencoded({extended: true, limit: "16kb"}))
-app.use(express.static("public"))
-app.use(cookieParser())
-
+app.use(express.json({ limit: '16kb' }));
+app.use(express.urlencoded({ extended: true, limit: '16kb' }));
+app.use(express.static('public'));
+app.use(cookieParser());
 
 export default app;
